@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    	body{
+    		font-family: sans-serif;
+    		background-image: url('http://www.zeldadungeon.net/wp-content/uploads/2012/05/how-i-met-your-mother.jpg');
+    		background-repeat: no-repeat;
+    		background-position: top right;
+    		padding-left: 5vh;
+    	}
+    	h1{
+    		font-size: 5vh;
+    	}
+    	button{
+    		background: #ff7b2e;
+    		outline: 0;
+    		border: 0;
+    		color: #fff;
+    		padding: 2vh 3vh;
+    		cursor: pointer;
+    		font-size: 2vh;
+    		-webkit-transition: all 0.5s;
+    		-moz-transition: all 0.5s;
+    		-ms-transition: all 0.5s;
+    		-o-transition: all 0.5s;
+    		transition: all 0.5s;
+    		border-radius: 5px;
+    	}
+    	button:hover{
+    		background: #ffa068
+    	}
+    	#result{
+    		padding: 3vh 0;
+    		font-size: 4vh;
+    		line-height: 1.5;
+    	}
+    </style>
+</head>
+
+<body>
+    <h1>Random episode Generator</h1>
+    <button onclick="runRandom()">Get Episode</button>
+    <div id="result"></div>
+    <script>
+    function runRandom() {
+        var season = getRandomInt(1, 9);
+        var episode = function() {
+            if (season == 3) {
+                return getRandomInt(1, 20)
+            } else {
+                return getRandomInt(1, 24)
+            }
+        }
+        document.getElementById('result').innerHTML = "Season: " + season + "<br> Episode: " + episode()
+    }
+
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+    </script>
+</body>
+
+</html>
