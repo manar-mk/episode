@@ -1,0 +1,46 @@
+body{
+	background-image: url('../img/maxresdefault.jpg');
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding: 5vh;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+	background-attachment: fixed;
+}
+#result{
+	padding: 10px 0;
+}
+.series{
+	background-position: 90% 10%;
+	-webkit-background-size: 60%;
+	background-size: 60%;
+}
+.series h1{
+	font-size: 48px;
+}
+.series p {
+	font-size: 24px;
+}
+.himym{
+	background-image: url('http://www.zeldadungeon.net/wp-content/uploads/2012/05/how-i-met-your-mother.jpg');
+}
+.scrubs{
+	background-position: 100% 10%;
+	background-color: #F3F3F5;
+	background-image: url('http://images2.fanpop.com/images/photos/7500000/Scrubs-scrubs-7589915-1280-1024.jpg');
+}
+
+.friends{
+	background-position: 100% 10%;
+	-webkit-background-size: 70%;
+	background-size: 70%;
+	background-color: #FEF1E1;
+	background-image: url('http://wallpapercave.com/wp/75KenAW.jpg');
+}

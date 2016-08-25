@@ -3,65 +3,47 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <style>
-    	body{
-    		font-family: sans-serif;
-    		background-image: url('http://www.zeldadungeon.net/wp-content/uploads/2012/05/how-i-met-your-mother.jpg');
-    		background-repeat: no-repeat;
-    		background-position: top right;
-    		padding-left: 5vh;
-    	}
-    	h1{
-    		font-size: 5vh;
-    	}
-    	button{
-    		background: #ff7b2e;
-    		outline: 0;
-    		border: 0;
-    		color: #fff;
-    		padding: 2vh 3vh;
-    		cursor: pointer;
-    		font-size: 2vh;
-    		-webkit-transition: all 0.5s;
-    		-moz-transition: all 0.5s;
-    		-ms-transition: all 0.5s;
-    		-o-transition: all 0.5s;
-    		transition: all 0.5s;
-    		border-radius: 5px;
-    	}
-    	button:hover{
-    		background: #ffa068
-    	}
-    	#result{
-    		padding: 3vh 0;
-    		font-size: 4vh;
-    		line-height: 1.5;
-    	}
-    </style>
+    <title>Random Episode Generator</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <h1>Random episode Generator</h1>
-    <button onclick="runRandom()">Get Episode</button>
-    <div id="result"></div>
-    <script>
-    function runRandom() {
-        var season = getRandomInt(1, 9);
-        var episode = function() {
-            if (season == 3) {
-                return getRandomInt(1, 20)
-            } else {
-                return getRandomInt(1, 24)
-            }
-        }
-        document.getElementById('result').innerHTML = "Season: " + season + "<br> Episode: " + episode()
-    }
-
-    function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min)) + min;
-    }
-    </script>
+    <div class="main container">
+        <div class="jumbotron">
+            <h1>Welcome to Episode</h1>
+            <p>
+                Don't know what episode of your favourite series to watch?
+                <br> You can use this simple randomizer to get episode and season number.
+            </p>
+            <h3>Enjoy watching :)</h3>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Select the series</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="series/himym.html" class="thumbnail">
+                            <img src="https://telestrekoza.com/wp-content/uploads/x41798777321.jpg" alt="How I met your mother">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="series/scrubs.html" class="thumbnail">
+                            <img src="http://www.cineparadise.com/wp-content/uploads/2014/07/season-four-scrubs-poster.jpg" alt="Scrubs">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="series/friends.html" class="thumbnail">
+                            <img src="http://image.tmdb.org/t/p/original/9v2zrMRB8y9aDudbK7DPHkzkTcO.jpg" alt="Friends">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
