@@ -1,4 +1,4 @@
-function himym() {
+function friends() {
     var season = getRandomInt(1, 10);
     var episode = function() {
         if (season == 3 ||  season == 6) {
@@ -11,7 +11,7 @@ function himym() {
     }
     document.getElementById('result').innerHTML = "Season: " + season + "<br> Episode: " + episode()
 }
-function friends() {
+function himym() {
     var season = getRandomInt(1, 9);
     var episode = function() {
         if (season == 3) {
